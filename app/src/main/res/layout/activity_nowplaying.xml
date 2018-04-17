@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context="com.example.marwa.musicplayer.Activity.NowPlaying_Activity">
+
+    <TextView
+        android:id="@+id/text_song"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/textSize"
+        tools:text="My Heart Will Go On" />
+
+    <TextView
+        android:id="@+id/text_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/smallTextSize"
+        tools:text="Celin Dion" />
+
+    <ImageView
+        android:id="@+id/singer_photo"
+        android:layout_width="@dimen/widthOfImage"
+        android:layout_height="@dimen/heightOfImage"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:contentDescription="@string/photo_of_the_singer"
+        tools:src="@drawable/celin_dion" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/skip"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="@dimen/widthOfImageButton"
+            android:layout_height="@dimen/heightOfImageButton"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:contentDescription="@string/skip"
+            android:src="@drawable/ic_skip_previous_black" />
+
+        <ImageButton
+            android:id="@+id/play"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="@dimen/widthOfPlayButton"
+            android:layout_height="@dimen/heightOfImageButton"
+            android:contentDescription="@string/play"
+            android:src="@drawable/ic_play_arrow_black" />
+
+        <ImageButton
+            android:id="@+id/next"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="@dimen/widthOfImageButton"
+            android:layout_height="@dimen/heightOfImageButton"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:contentDescription="@string/next"
+            android:src="@drawable/ic_skip_next_black" />
+    </LinearLayout>
+</LinearLayout>

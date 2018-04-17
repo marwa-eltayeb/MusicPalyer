@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="photo_of_the_singer">Photo of the singer</string>
+    <string name="play_song">Play song</string>
+    <string name="songs_actvity">Playlist</string>
+    <string name="now_playing">Now Playing...</string>
+    <string name="skip">skip</string>
+    <string name="play">play</string>
+    <string name="next">next</string>
+
+    <string name="celine_dion">Celine Dion</string>
+    <string name="james_blunt">James Blunt</string>
+    <string name="enrique_iglesias">Enrique Iglesias</string>
+    <string name="bryan_adams">Bryan Adams</string>
+</resources>

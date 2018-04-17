@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heightOfImage">200dp</dimen>
+    <dimen name="widthOfImage">250dp</dimen>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="marginBottom">5dp</dimen>
+    <dimen name="textSize">25sp</dimen>
+    <dimen name="smallTextSize">20sp</dimen>
+    <dimen name="layoutHeight">80dp</dimen>
+
+    <dimen name="widthOfImageButton">50dp</dimen>
+    <dimen name="heightOfImageButton">40dp</dimen>
+    <dimen name="widthOfPlayButton">40dp</dimen>
+    <dimen name="margin">20dp</dimen>
+</resources>
