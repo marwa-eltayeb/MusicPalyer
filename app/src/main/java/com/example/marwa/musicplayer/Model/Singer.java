@@ -44,7 +44,7 @@ public class Singer {
     }
 
     /**
-     * Returns whether or not there is an image for this word.
+     * Returns whether or not there is an image for this song.
      */
     public boolean hasImage() {
         return imageResourceId != NO_IMAGE_PROVIDED;
