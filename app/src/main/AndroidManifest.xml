@@ -9,25 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity">
+
+        <activity android:name=".activity.MainActivity"></activity>
+
+        <activity
+            android:name=".activity.Songs_Activity"
+            android:label="@string/songs_actvity"
+            android:parentActivityName=".activity.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activity.NowPlaying_Activity"
+            android:label="@string/now_playing"></activity>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".Activity.Songs_Activity"
-            android:label="@string/songs_actvity"
-            android:parentActivityName=".Activity.MainActivity">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activity.MainActivity" />
-        </activity>
-        <activity android:name=".Activity.NowPlaying_Activity"
-                  android:label="@string/now_playing">
         </activity>
     </application>
 
