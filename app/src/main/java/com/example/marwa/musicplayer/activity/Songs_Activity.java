@@ -1,4 +1,4 @@
-package com.example.marwa.musicplayer.Activity;
+package com.example.marwa.musicplayer.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.marwa.musicplayer.R;
-import com.example.marwa.musicplayer.Model.Song;
-import com.example.marwa.musicplayer.Adapter.SongAdapter;
+import com.example.marwa.musicplayer.model.Song;
+import com.example.marwa.musicplayer.adapter.SongAdapter;
 
 import java.util.ArrayList;
 

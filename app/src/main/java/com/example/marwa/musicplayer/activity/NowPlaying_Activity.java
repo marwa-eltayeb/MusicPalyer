@@ -1,4 +1,4 @@
-package com.example.marwa.musicplayer.Activity;
+package com.example.marwa.musicplayer.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +17,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.marwa.musicplayer.Adapter.SongAdapter;
+import com.example.marwa.musicplayer.adapter.SongAdapter;
 import com.example.marwa.musicplayer.R;
 
 public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
