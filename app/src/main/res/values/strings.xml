@@ -3,7 +3,7 @@
     <string name="photo_of_the_singer">Photo of the singer</string>
     <string name="play_song">Play song</string>
     <string name="songs_actvity">Playlist</string>
-    <string name="now_playing">Now Playing...</string>
+    <string name="now_playing">Now Playing</string>
     <string name="skip">skip</string>
     <string name="play">play</string>
     <string name="next">next</string>
@@ -13,4 +13,6 @@
     <string name="enrique_iglesias">Enrique Iglesias</string>
     <string name="bryan_adams">Bryan Adams</string>
     <string name="home">home</string>
+    <string name="logo">logo</string>
+    <string name="music_player">Music Player</string>
 </resources>
