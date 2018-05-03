@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:orientation="vertical"
-    tools:context="com.example.marwa.musicplayer.Activity.NowPlaying_Activity">
+    tools:context="com.example.marwa.musicplayer.activity.NowPlaying_Activity">
 
     <TextView
         android:id="@+id/text_song"
