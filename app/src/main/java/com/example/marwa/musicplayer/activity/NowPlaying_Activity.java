@@ -17,8 +17,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.marwa.musicplayer.adapter.SongAdapter;
 import com.example.marwa.musicplayer.R;
+import com.example.marwa.musicplayer.TimerUtils;
+import com.example.marwa.musicplayer.adapter.SongAdapter;
 
 public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
@@ -32,6 +33,8 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
     private ImageButton skip;
     private ImageButton next;
     private SeekBar seekBar;
+    private TextView startingTime;
+    private TextView endingTime;
 
     /**
      * Handles playback of all the sound files.
@@ -134,6 +137,8 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
         }
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -189,8 +194,10 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
                     // Play the song
                     mediaPlayer.start();
 
+
                     // Get the whole duration of song
                     finalTime = mediaPlayer.getDuration();
+                    endingTime.setText("" + TimerUtils.milliSecondsToTimer((long) finalTime));
                     // Get Which second in the song
                     startTime = mediaPlayer.getCurrentPosition();
 
@@ -256,6 +263,7 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
                 if (mediaPlayer != null && startTime < finalTime) {
                     // Update the visual position of the progress indicator to the current Position.
                     startTime = mediaPlayer.getCurrentPosition();
+                    startingTime.setText("" + TimerUtils.milliSecondsToTimer((long) startTime));
                     seekBar.setProgress((int) startTime);
                     // Update SeekBar every 100 ms.
                     myHandler.postDelayed(this, 100);
@@ -288,6 +296,9 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
         skip = (ImageButton) findViewById(R.id.skip);
         next = (ImageButton) findViewById(R.id.next);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
+        startingTime = (TextView) findViewById(R.id.startingTime);
+        endingTime = (TextView) findViewById(R.id.endingTime);
+
     }
 
     /**
@@ -390,6 +401,8 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
 
 }
