@@ -197,7 +197,8 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
 
                     // Get the whole duration of song
                     finalTime = mediaPlayer.getDuration();
-                    endingTime.setText("" + TimerUtils.milliSecondsToTimer((long) finalTime));
+                    //  Show Ending Time
+                    endingTime.setText(TimerUtils.milliSecondsToTimer((long) finalTime));
                     // Get Which second in the song
                     startTime = mediaPlayer.getCurrentPosition();
 
@@ -263,10 +264,11 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
                 if (mediaPlayer != null && startTime < finalTime) {
                     // Update the visual position of the progress indicator to the current Position.
                     startTime = mediaPlayer.getCurrentPosition();
-                    startingTime.setText("" + TimerUtils.milliSecondsToTimer((long) startTime));
                     seekBar.setProgress((int) startTime);
                     // Update SeekBar every 100 ms.
                     myHandler.postDelayed(this, 100);
+                    //  Show Starting Time
+                    startingTime.setText(TimerUtils.milliSecondsToTimer((long) startTime));
                 }
             }
         };
