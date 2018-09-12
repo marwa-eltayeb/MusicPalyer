@@ -15,4 +15,5 @@
     <string name="home">home</string>
     <string name="logo">logo</string>
     <string name="music_player">Music Player</string>
+    <string name="start_end">0:00</string>
 </resources>
