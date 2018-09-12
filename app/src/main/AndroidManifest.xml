@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity">
+        </activity>
 
         <activity
             android:name=".activity.Songs_Activity"
             android:label="@string/songs_actvity"
+            android:launchMode="singleTop"
             android:parentActivityName=".activity.MainActivity">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -25,7 +27,14 @@
 
         <activity
             android:name=".activity.NowPlaying_Activity"
-            android:label="@string/now_playing"></activity>
+            android:label="@string/now_playing"
+            android:parentActivityName=".activity.Songs_Activity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.Songs_Activity" />
+        </activity>
 
         <activity
             android:name=".activity.SplashActivity"
