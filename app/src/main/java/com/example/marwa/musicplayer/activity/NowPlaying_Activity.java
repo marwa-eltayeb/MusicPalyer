@@ -102,10 +102,6 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
         public void onAudioFocusChange(int focusChange) {
             if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
                     focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                // The AUDIOFOCUS_LOSS_TRANSIENT case means that we've lost audio focus for a
-                // short amount of time. The AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK case means that
-                // our app is allowed to continue playing sound but at a lower volume. We'll treat
-                // both cases the same way because our app is playing short sound files.
 
                 // Pause playback
                 mediaPlayer.pause();
@@ -273,7 +269,6 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
             }
         };
 
-
         // If it is a new song, reset everything.
         if (isNewSong) {
             startTime = 0;
@@ -285,7 +280,6 @@ public class NowPlaying_Activity extends AppCompatActivity implements SeekBar.On
         // Set Listener to seekBar when is changed.
         seekBar.setOnSeekBarChangeListener(this);
     }
-
 
     /**
      * Initialize all Ui elements.
